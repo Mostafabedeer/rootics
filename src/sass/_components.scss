@@ -1,0 +1,349 @@
+.logo__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: scale(0.5) translate(0px, -50%);
+  height: auto;
+}
+.logo--1 {
+  margin-top: -13rem;
+  transform: scale(0.6);
+}
+.logo--2 {
+  margin-top: -72rem;
+  transform: translate(0px, -7rem);
+  visibility: hidden;
+  display: block;
+}
+
+.logo--3 {
+  margin-top: -13rem;
+  //margin-top: -165rem;
+  transform: translate(0px, -10.5rem) scale(0.5);
+}
+
+.logo--4 {
+  visibility: hidden;
+  margin-top: -75rem;
+  z-index: -1;
+}
+
+.plant {
+  position: absolute;
+  height: 55rem;
+  width: 55rem;
+  // visibility: hidden;
+  @include respond(phone) {
+    height: 25rem;
+    width: 25rem;
+  }
+  &--1 {
+    top: -7%;
+    left: -4%;
+  }
+  &--2 {
+    top: -4%;
+    right: -4%;
+  }
+  &--3 {
+    bottom: -20%;
+    left: -4%;
+    @include respond(phone) {
+      bottom: -5%;
+    }
+  }
+  &--4 {
+    bottom: -20%;
+    right: -10%;
+    @include respond(phone) {
+      bottom: -5%;
+    }
+  }
+}
+
+.hero__btn_container {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.hero__btn {
+  font-family: inherit;
+  text-decoration: none;
+  background-color: $background-color;
+  color: #fcbb45;
+  padding: 1.5rem 3rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.btn-conteiner {
+  display: flex;
+  justify-content: center;
+  --color-text: #ffffff;
+  --color-background: #197f5a;
+  --color-outline: #204338;
+  --color-shadow: #00000080;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 3rem;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: 1s;
+  border-radius: 10rem;
+  box-shadow: 0 0 0.2rem 0 var(--color-background);
+}
+
+.btn-content:hover,
+.btn-content:focus {
+  transition: 0.5s;
+  -webkit-animation: btn-content 1s;
+  animation: btn-content 1s;
+  outline: 0.1rem solid transparent;
+  outline-offset: 0.2rem;
+  box-shadow: 0 0 0.4rem 0 var(--color-background);
+}
+
+.btn-content .icon-arrow {
+  transition: 0.5s;
+  margin-right: 0px;
+  transform: scale(0.6);
+}
+
+.btn-content:hover .icon-arrow {
+  transition: 0.5s;
+  margin-right: 2.5rem;
+}
+
+.icon-arrow {
+  width: 2rem;
+  margin-left: 1.5rem;
+  position: relative;
+  top: 6%;
+}
+
+/* SVG */
+#arrow-icon-one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.btn-content:hover #arrow-icon-three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-content:hover #arrow-icon-one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-content:hover #arrow-icon-two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: var(--color-background);
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
+/* Button animations */
+@-webkit-keyframes btn-content {
+  0% {
+    outline: 0.2rem solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+@keyframes btn-content {
+  0% {
+    outline: 0.2rem solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+.voltage-btn {
+  font-size: 1.6rem !important;
+  font-weight: 500;
+}
+
+.voltage-button {
+  position: relative;
+  width: fit-content;
+  margin: 2.5rem auto 0 auto;
+}
+
+.voltage-button a {
+  color: white;
+  background: $background-color;
+  padding: 1rem 3rem 1rem 3rem;
+  border-radius: 5rem;
+  border: 5px solid #2bd598;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  letter-spacing: 0.075rem;
+  transition: background 0.3s;
+}
+
+.voltage-button a:hover {
+  cursor: pointer;
+  background: $background-color-ligter;
+}
+
+.voltage-button a:hover + svg,
+.voltage-button a:hover + svg + .dots {
+  opacity: 1;
+}
+
+.voltage-button svg {
+  display: block;
+  position: absolute;
+  top: -0.75rem;
+  left: -0.25rem;
+  width: calc(100% + 0.5rem);
+  height: calc(100% + 1.5rem);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s;
+  transition-delay: 0.1s;
+}
+
+.voltage-button svg path {
+  stroke-dasharray: 100;
+  filter: url("#glow");
+}
+
+.voltage-button svg path.line-1 {
+  stroke: #f6de8d;
+  stroke-dashoffset: 0;
+  animation: spark-1 3s linear infinite;
+}
+
+.voltage-button svg path.line-2 {
+  stroke: #6bfeff;
+  stroke-dashoffset: 500;
+  animation: spark-2 3s linear infinite;
+}
+
+.voltage-button .dots {
+  opacity: 0;
+  transition: opacity 0.3s;
+  transition-delay: 0.4s;
+}
+
+.voltage-button .dots .dot {
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border-radius: 100%;
+  position: absolute;
+  opacity: 0;
+}
+
+.voltage-button .dots .dot-1 {
+  top: 0;
+  left: 20%;
+  animation: fly-up 3s linear infinite;
+}
+
+.voltage-button .dots .dot-2 {
+  top: 0;
+  left: 55%;
+  animation: fly-up 3s linear infinite;
+  animation-delay: 0.5s;
+}
+
+.voltage-button .dots .dot-3 {
+  top: 0;
+  left: 80%;
+  animation: fly-up 3s linear infinite;
+  animation-delay: 1s;
+}
+
+.voltage-button .dots .dot-4 {
+  bottom: 0;
+  left: 30%;
+  animation: fly-down 3s linear infinite;
+  animation-delay: 2.5s;
+}
+
+.voltage-button .dots .dot-5 {
+  bottom: 0;
+  left: 65%;
+  animation: fly-down 3s linear infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes spark-1 {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+@keyframes spark-2 {
+  to {
+    stroke-dashoffset: -500;
+  }
+}
+
+@keyframes fly-up {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.2);
+  }
+
+  5% {
+    opacity: 1;
+    transform: translateY(-1.5rem) scale(0.4);
+  }
+
+  10%,
+  100% {
+    opacity: 0;
+    transform: translateY(-3rem) scale(0.2);
+  }
+}
+
+@keyframes fly-down {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.2);
+  }
+
+  5% {
+    opacity: 1;
+    transform: translateY(1.5rem) scale(0.4);
+  }
+
+  10%,
+  100% {
+    opacity: 0;
+    transform: translateY(3rem) scale(0.2);
+  }
+}

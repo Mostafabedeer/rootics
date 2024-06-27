@@ -1,0 +1,180 @@
+.nav {
+  position: relative;
+  background-color: $background-color;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8rem;
+  @include respond(phone) {
+    justify-content: flex-end;
+  }
+
+  &__contanier {
+    @include respond(phone) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $background-color;
+      height: 100vh;
+      width: 70vw;
+      transition: all 0.5s ease-out;
+      transform: translateX(-100%);
+    }
+  }
+  &__icon {
+    display: none;
+    width: 60px;
+    height: 41px;
+    margin: 0 4rem;
+    @include respond(phone) {
+      display: block;
+    }
+    &_img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__logo {
+    width: 30rem;
+    height: 100%;
+
+    &_img {
+      width: 100%;
+      margin-top: -16rem;
+      @include respond(phone) {
+        margin-top: -14rem;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    list-style: none;
+    font-size: 3.1rem;
+    font-weight: 700;
+    line-height: 3.6rem;
+    text-transform: uppercase;
+    @include respond(phone) {
+      flex-direction: column;
+      gap: 4rem;
+      text-align: center;
+    }
+  }
+  &__item {
+    position: relative;
+    padding-bottom: 0.8rem;
+    transition: all 0.2s ease-in;
+    color: $color-2;
+    @include respond(phone) {
+      width: 100%;
+      padding: 3rem 1.5rem;
+      border-radius: 0 15rem 15rem 0;
+    }
+    &:first-of-type {
+      @include respond(phone) {
+        padding: 0;
+        margin-right: 2rem;
+      }
+    }
+
+    &:not(:first-child):hover {
+      color: $color;
+      border-bottom: 5px solid currentColor;
+    }
+
+    &:nth-child(2):after,
+    &:nth-child(3):after {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: $color-2;
+      font-size: inherit;
+      position: absolute;
+      right: -40%;
+      bottom: 0;
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: currentColor;
+  }
+}
+
+.why {
+  position: relative;
+  background-color: $background-color;
+  background-image: url(../../assets/images/background.png);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & h2 {
+    display: flex;
+    align-items: center;
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__container {
+    max-width: 144rem;
+    backdrop-filter: blur(10px);
+    padding: 3rem 6rem;
+    border-radius: 12px;
+    @include respond(phone) {
+      padding: 1.5rem 3rem;
+      max-width: 25rem;
+    }
+  }
+
+  &__plant {
+    position: absolute;
+    height: 55rem;
+    width: 55rem;
+    @include respond(phone) {
+      height: 25rem;
+      width: 25rem;
+    }
+  }
+  &__logo_container {
+    width: 30rem;
+    height: 30rem;
+    @include respond(phone) {
+      width: 15rem;
+      height: 22rem;
+      margin: -7rem 0;
+    }
+  }
+  &__head {
+    @include respond(phone) {
+      margin: 0 0 7rem 0;
+    }
+  }
+  &__logo_img,
+  &__logoEl_img,
+  &__logoName_img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__logo_img {
+    margin-bottom: -15rem;
+  }
+  &__logoEl_img {
+    margin-top: -20%;
+  }
+  &__logoName_img {
+    margin-top: -30%;
+    transform: scale(1.5);
+  }
+}

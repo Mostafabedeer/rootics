@@ -1,0 +1,97 @@
+.plants {
+  position: relative;
+  background-color: #204338;
+  background-image: url(../../assets/images/plants_back.png);
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  overflow: hidden;
+  &__container {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__imgs_container {
+    width: 50rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  &__img_container {
+    width: 100%;
+  }
+  &__img {
+    width: 110%;
+  }
+
+  &__description_container {
+    display: flex;
+    flex-direction: column;
+    @include respond(phone) {
+      justify-content: center;
+      padding-left: 2rem;
+    }
+  }
+
+  &--1,
+  &--2,
+  &--3 {
+    height: 100vh;
+    padding-top: 5rem;
+  }
+
+  &__sub {
+    display: block;
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 2.65rem;
+    color: #fff;
+    @include respond(phone) {
+      font-size: 1.25rem;
+      line-height: 0.65rem;
+    }
+  }
+  &__heading {
+    text-transform: uppercase;
+    font-size: 15rem;
+    font-weight: bold;
+    color: $color;
+    @include respond(phone) {
+      font-size: 4rem;
+    }
+  }
+
+  &__breif {
+    font-size: 2.1rem;
+    font-weight: 500;
+    line-height: 2.6rem;
+    color: #fff;
+    @include respond(phone) {
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.6rem;
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+    @include respond(phone) {
+      right: none;
+      left: 0;
+      top: 60%;
+      padding-left: 3rem;
+    }
+  }
+  &__control {
+    margin: 0 3rem 3rem 0;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(#fff, 0.68);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}

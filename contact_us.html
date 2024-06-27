@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rootics - we care from roots to leaves</title>
+    <meta
+      name="description"
+      content="plants landing page using gsap and webgi"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Threejs landing page for plants application"
+    />
+    <meta
+      property="og:description"
+      content="Threejs landing page for plants application using WEBGi"
+    />
+
+    <meta
+      name="twitter:title"
+      content="Threejs landing page for plants application using WEBGi"
+    />
+    <meta
+      name="twitter:description"
+      content="Threejs landing page for plants application using WEBGi"
+    />
+
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta charset="UTF-8" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicons/fav_192.jpeg"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/fav_32.jpeg"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicons/fav_16.jpeg"
+    />
+    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <meta
+      name="msapplication-TileColor"
+      content="#204338
+"
+    />
+    <meta
+      name="theme-color"
+      content="#204338
+"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./src/sass/main.scss" />
+  </head>
+
+  <body class="container contact">
+    <header>
+      <nav class="nav">
+        <div class="nav__contanier">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <div class="nav__logo">
+                <a href="./index.html">
+                  <img
+                    src="./assets/images/app_name.svg"
+                    alt="app name"
+                    class="nav__logo_img"
+                  />
+                </a>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="./home.html" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="./plants.html" class="nav__link">Plants</a>
+            </li>
+            <li class="nav__item active">
+              <a href="./contact_us.html" class="nav__link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__icon">
+          <img
+            src="./assets/images/nav_icon.png"
+            alt="nav icon"
+            class="nav__icon_img"
+          />
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="contact_us">
+        <img
+          src="./assets/images/p1.png"
+          alt="plant1"
+          class="why__plant plant--1"
+        />
+        <img
+          src="./assets/images/p2.png"
+          alt="plant1"
+          class="why__plant plant--2"
+        />
+        <img
+          src="./assets/images/p3.png"
+          alt="plant1"
+          class="why__plant plant--3"
+        />
+        <img
+          src="./assets/images/p4.png"
+          alt="plant1"
+          class="why__plant plant--4"
+        />
+        <form class="contact_us__form">
+          <div class="contact_us__container">
+            <div class="contact_us__controls">
+              <div class="contact_us_control">
+                <label for="name" class="contact_us__label">Name</label>
+                <input type="text" id="name" class="contact_us__input" />
+              </div>
+
+              <div class="contact_us_control">
+                <label for="email" class="contact_us__label">Email</label>
+                <input type="email" id="email" class="contact_us__input" />
+              </div>
+
+              <div class="contact_us_control">
+                <label for="message" class="contact_us__label">Message</label>
+                <textarea id="message" class="contact_us__input"></textarea>
+              </div>
+              <div class="contact_us_control">
+                <button type="submit" class="contact_us__btn">Submit</button>
+              </div>
+            </div>
+            <div class="contact_us_img_container">
+              <img
+                src="./assets/images/conatct.png"
+                class="contact_us__img"
+                alt="contact image"
+              />
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="src/index.ts"></script>
+  </body>
+</html>

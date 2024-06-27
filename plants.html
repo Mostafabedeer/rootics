@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rootics - we care from roots to leaves</title>
+    <meta
+      name="description"
+      content="plants landing page using gsap and webgi"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Threejs landing page for plants application"
+    />
+    <meta
+      property="og:description"
+      content="Threejs landing page for plants application using WEBGi"
+    />
+
+    <meta
+      name="twitter:title"
+      content="Threejs landing page for plants application using WEBGi"
+    />
+    <meta
+      name="twitter:description"
+      content="Threejs landing page for plants application using WEBGi"
+    />
+
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta charset="UTF-8" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicons/fav_192.jpeg"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/fav_32.jpeg"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicons/fav_16.jpeg"
+    />
+    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <meta
+      name="msapplication-TileColor"
+      content="#204338
+"
+    />
+    <meta
+      name="theme-color"
+      content="#204338
+"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./src/sass/main.scss" />
+  </head>
+
+  <body class="rootics">
+    <header>
+      <nav class="nav">
+        <div class="nav__contanier">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <div class="nav__logo">
+                <a href="./index.html" class="nav__link">
+                  <img
+                    src="./assets/images/app_name.svg"
+                    alt="app name"
+                    class="nav__logo_img"
+                  />
+                </a>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="./home.html" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item active">
+              <a href="./plants.html" class="nav__link">Plants</a>
+            </li>
+            <li class="nav__item">
+              <a href="./contact_us.html" class="nav__link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__icon">
+          <img
+            src="./assets/images/nav_icon.png"
+            alt="nav icon"
+            class="nav__icon_img"
+          />
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="plants container">
+        <div class="plants__container">
+          <div class="plants__controls">
+            <div class="plants__control" data-slide="0"></div>
+            <div class="plants__control" data-slide="1"></div>
+            <div class="plants__control" data-slide="2"></div>
+          </div>
+          <div class="plants__description_container">
+            <div class="plants--1">
+              <span class="plants__sub">plants</span>
+              <h4 class="plants__heading">cactus</h4>
+              <p class="plants__breif">
+                Cactus plants are resilient, spiky succulents adapted to arid
+                environments.
+              </p>
+            </div>
+            <!-- <div class="plants--2">
+              <span class="plants__sub">plants</span>
+              <h4 class="plants__heading">apple</h4>
+              <p class="plants__breif">
+                Apple plants are deciduous fruit trees known for their sweet.
+              </p>
+            </div>
+            <div class="plants--3">
+              <span class="plants__sub">plants</span>
+              <h4 class="plants__heading">orange</h4>
+              <p class="plants__breif">
+                Orange plants are citrus trees that produce juicy, tangy fruit.
+              </p>
+            </div> -->
+          </div>
+          <div class="plants__imgs_container">
+            <div class="plants__img_container">
+              <img
+                src="./assets/images/plant1.png"
+                alt="cactus plant"
+                class="plants__img"
+              />
+            </div>
+            <div class="plants__img_container">
+              <img
+                src="./assets/images/plant2.png"
+                alt="apple plant"
+                class="plants__img"
+              />
+            </div>
+            <div class="plants__img_container">
+              <img
+                src="./assets/images/plant3.png"
+                alt="cactus plant"
+                class="plants__img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="src/index.ts"></script>
+  </body>
+</html>

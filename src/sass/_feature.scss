@@ -1,0 +1,143 @@
+.feature {
+  background-color: #589681;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    height: 70%;
+    width: 90%;
+    display: flex;
+    background-color: $background-color;
+    border-radius: 4rem;
+    @include respond(phone) {
+      flex-direction: column;
+      height: 90%;
+      width: 90%;
+    }
+  }
+  &__heading_container {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 0 0 6rem;
+    @include respond(phone) {
+      display: flex;
+      align-items: center;
+
+      margin: 0;
+    }
+  }
+
+  &__heading_container:nth-child(even) {
+    margin: 0 0 0 20rem;
+    @include respond(phone) {
+      margin: 0;
+    }
+  }
+  &__img_container {
+    border-radius: 3rem;
+    overflow: hidden;
+    @include respond(phone) {
+      height: 40rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 3rem;
+    color: $color-2;
+    width: 85%;
+    @include respond(phone) {
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 2.2rem;
+      width: 90%;
+    }
+  }
+
+  &__heading--1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 2rem;
+    letter-spacing: 5.695673942565918px;
+    text-transform: uppercase;
+    color: $color;
+    margin-top: 4rem;
+    @include respond(phone) {
+      font-size: 1rem;
+      line-height: 0;
+    }
+  }
+
+  &__number {
+    display: inline-block;
+    font-size: 22.5rem;
+    font-weight: 700;
+    line-height: 2.28rem;
+    height: 100%;
+    position: relative;
+    color: #fcbc456f;
+    margin-right: 9rem;
+    @include respond(phone) {
+      font-size: 8.5rem;
+      margin-right: 5rem;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: -50%;
+      bottom: 10%;
+      height: 2px;
+      width: 7rem;
+      background-color: $color;
+      @include respond(phone) {
+        bottom: -3%;
+
+        width: 3rem;
+      }
+    }
+  }
+
+  &__heading--2 {
+    font-size: 6.4rem;
+    font-weight: 700;
+    line-height: 7.5rem;
+    color: $color;
+    text-transform: capitalize;
+    margin: 1rem 0 2rem 0;
+    @include respond(phone) {
+      font-size: 3.4rem;
+
+      line-height: 4.5rem;
+
+      margin: 2rem 0 2rem 0;
+    }
+  }
+
+  &__readmore:link,
+  &__readmore:visited {
+    margin-top: 3rem;
+    text-decoration: none;
+    color: $color;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 2rem;
+    margin: 3rem 0 0 3.5rem;
+    @include respond(phone) {
+      margin-top: 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 2rem 5rem;
+      align-self: flex-start;
+    }
+  }
+}

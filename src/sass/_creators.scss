@@ -1,0 +1,108 @@
+.creators {
+  background-color: $background-color-ligter;
+  background-image: url(../../assets/images/creators.png);
+  background-repeat: no-repeat;
+  background-position: 59%;
+}
+
+.creator {
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &__container {
+    display: flex;
+    padding-top: 4rem;
+    @include respond(phone) {
+      padding-top: 0;
+    }
+
+    @include respond(phone) {
+      justify-content: space-around;
+    }
+
+    &:last-child {
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding-top: 0rem;
+      @include respond(phone) {
+        justify-content: space-around;
+        margin-top: -20rem;
+      }
+
+      & .creator__photo {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  &__profile {
+    width: 40%;
+  }
+  &__photo {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    overflow: hidden;
+    @include respond(phone) {
+      width: 14rem;
+      height: 14rem;
+    }
+  }
+  &__developer {
+    width: 100%;
+    height: 100%;
+  }
+  &__heading {
+    margin-top: 1.5rem;
+    color: $color;
+    font-size: 9.6rem;
+    font-weight: 400;
+    line-height: 11.2rem;
+    text-align: center;
+    @include respond(phone) {
+      font-size: 3.2rem;
+      margin-top: 0;
+      line-height: 5.2rem;
+    }
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+    @include respond(phone) {
+      gap: 3rem;
+    }
+  }
+
+  &__item {
+    width: 10.8rem;
+    height: 10.8rem;
+
+    @include respond(phone) {
+      display: flex;
+      align-items: center;
+    }
+    &:last-child {
+      margin: 0 0 -3rem -4rem;
+      @include respond(phone) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.ghareb__profile {
+  order: 1;
+}
